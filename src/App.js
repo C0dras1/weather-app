@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Logo />
-        <h1>Vanbrella</h1>
+        <h1>UmbrellaCheck</h1>
       </header>
       <main>
         <Forecast />
