@@ -8,7 +8,6 @@ const Forecast = () => {
   const [unit, setUnit] = useState("metric");
   const [error, setError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [forecastTime, setForecastTime] = useState("");
   const [timeAway, setTimeAway] = useState("3");
 
   function getForecast(e) {
@@ -35,19 +34,6 @@ const Forecast = () => {
           throw new Error();
         }
         setResponseObj(response);
-        console.log(timeAway);
-        setForecastTime(forecastTime => {
-            const date = new Date(response.list[0].dt * 1000);
-            // Hours part from the timestamp
-            const hours = date.getHours();
-            // Minutes part from the timestamp
-            const minutes = "0" + date.getMinutes();
-            // Seconds part from the timestamp
-            const seconds = "0" + date.getSeconds();
-        
-            // Will display time in 10:30:23 format
-            return forecastTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
-        });
         setIsLoading(false);
       })
       .catch((err) => {
@@ -105,7 +91,6 @@ const Forecast = () => {
         error={error}
         isLoading={isLoading}
         unit={unit}
-        forecastTime={forecastTime}
         timeAway={timeAway}
       />
     </div>
