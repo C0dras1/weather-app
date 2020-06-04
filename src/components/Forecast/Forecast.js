@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Conditions from "../Conditions/Conditions";
 import classes from "./Forecast.module.css";
 
@@ -9,6 +9,7 @@ const Forecast = () => {
   const [error, setError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [forecastTime, setForecastTime] = useState("");
+  const [timeAway, setTimeAway] = useState("3");
 
   function getForecast(e) {
     e.preventDefault();
@@ -34,6 +35,7 @@ const Forecast = () => {
           throw new Error();
         }
         setResponseObj(response);
+        console.log(timeAway);
         setForecastTime(forecastTime => {
             const date = new Date(response.list[0].dt * 1000);
             // Hours part from the timestamp
@@ -86,8 +88,14 @@ const Forecast = () => {
             onChange={(e) => setUnit(e.target.value)}
           />
           Fahrenheit
-        </label>
-
+        </label><br/>
+        <label>How will you be out for?</label>
+        <select onChange={(e) => setTimeAway(e.target.value/3)}>
+            <option value="3">3 hours</option>
+            <option value="6">6 hours</option>
+            <option value="9">9 hours</option>
+            <option value="12">12 hours</option>
+        </select>
         <button className={classes.Button} type="submit">
           Get Forecast
         </button>
@@ -98,6 +106,7 @@ const Forecast = () => {
         isLoading={isLoading}
         unit={unit}
         forecastTime={forecastTime}
+        timeAway={timeAway}
       />
     </div>
   );
