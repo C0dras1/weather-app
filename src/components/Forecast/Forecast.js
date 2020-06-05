@@ -75,13 +75,14 @@ const Forecast = () => {
           />
           Fahrenheit
         </label><br/>
-        <label>How will you be out for?</label>
-        <select onChange={(e) => setTimeAway(e.target.value/3)}>
+        <label>How many hours will you be out for?</label>
+        <select className={classes.Select} onChange={(e) => setTimeAway(e.target.value/3)}>
             <option value="3">3 hours</option>
             <option value="6">6 hours</option>
             <option value="9">9 hours</option>
             <option value="12">12 hours</option>
         </select>
+        <div><small>* Please choose in multiples of 3</small></div>
         <button className={classes.Button} type="submit">
           Get Forecast
         </button>

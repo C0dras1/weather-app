@@ -2,17 +2,19 @@
   display: flex;
   flex-direction: column;
   min-height: 50vh;
+  background-color: #eaf1fd;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: rgb(5, 186, 251);
   min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #031840;
+  font-size: 3em;
 }
 
 .App-link {
@@ -25,14 +27,17 @@ main {
   padding: 40px;
 }
 
-footer {
-  padding: 2px;
-  min-height: 40px;
-  display: flex;
-  flex-direction: column;
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5%;
+  position: fixed;
   justify-content: center;
-  background: #EEEEEE;
+  background: rgb(0, 47, 64);
+  color: white;
   font-size: small;
   text-align: center;
+  line-height: 250%;
 }
 

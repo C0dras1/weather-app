@@ -14,7 +14,7 @@
 }
 
 .boldText {
-    color: #282c34;
+    color: rgb(0, 47, 64);
 }
 
 .Radio {
@@ -23,12 +23,22 @@
 
 .Button {
     display: block;
-    margin: 10px auto;
+    margin: 15px auto;
     padding: .5rem;
     font-size: 1em;
-    background: darkcyan;
+    font-weight: bold;
+    background: yellow;
     border-radius: 5px;
-    color: white;
+    color: rgb(0, 47, 64);
     cursor: pointer;
-    margin: 10px auto;
+}
+
+.Select {
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+small {
+    margin-top: 0;
+    font-size: 0.7em;
 }
