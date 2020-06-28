@@ -26,7 +26,7 @@ const Forecast = () => {
     const apiKey = encodeURIComponent("0dc26baaf4684e74bfe3377b2e8eca0b")
 
     //weather info for every 3 hours for the next 5 days api call
-    fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${uriEncodedCity}&units=${unit}&appid=${apiKey}`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${uriEncodedCity}&units=${unit}&appid=${apiKey}`)
       .then((response) => response.json())
       .then((response) => {
         setResponseObj(response);
