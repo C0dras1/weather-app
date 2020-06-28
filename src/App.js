@@ -13,9 +13,6 @@ function App() {
       <main>
         <Forecast />
       </main>
-      <div className="footer">
-        <footer>App created by Jesse Suderman</footer>
-      </div>
     </div>
   );
 }
