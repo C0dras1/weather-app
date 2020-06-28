@@ -1,20 +1,25 @@
 .App {
   display: flex;
   flex-direction: column;
-  min-height: 50vh;
+  min-height: 40vh;
   background-color: #eaf1fd;
 }
 
 .App-header {
   background-color: rgb(5, 186, 251);
-  min-height: 50vh;
+  min-height: 30vh;
+  max-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: #031840;
-  font-size: 3em;
+}
+
+.App-header h1 {
+  font-size: 350%;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .App-link {
@@ -24,7 +29,8 @@
 main {
   flex-grow: 1;
   text-align: center;
-  padding: 40px;
+  padding: 0px;
+  margin: 0;
 }
 
 .footer {
@@ -39,5 +45,11 @@ main {
   font-size: small;
   text-align: center;
   line-height: 250%;
+}
+
+@media only screen and (max-width: 450px) {
+  .App-header h1 {
+    font-size: 200%;
+  }
 }
 
